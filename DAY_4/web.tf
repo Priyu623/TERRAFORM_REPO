@@ -56,7 +56,7 @@ provisioner "remote-exec" {
 resource "null_resource" "nullremote2" {
   
 provisioner "local-exec" {
-   command = "chrome http://5.9.9.7/web/new_index.php"
+   command = "chrome http://${aws_instance.prov_os.public_ip}/web/new_index.php"
   }
 }
 
