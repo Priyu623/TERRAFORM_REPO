@@ -2,7 +2,7 @@ resource "null_resource" "nullremote1" {
 
 depends_on = [
     aws_instance.web_os,
-    aws_ebs_volume.storage1,
+    aws_ebs_volume.storage,
     aws_volume_attachment.ebs_attach
   ]
 
