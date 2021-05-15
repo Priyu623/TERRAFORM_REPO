@@ -4,6 +4,6 @@ resource "null_resource"  "nullremote2" {
         null_resource.nullremote1
     ]
 provisioner "local-exec" {
-   command = "open http://google.com/ http://${aws_instance.web_os.public_ip}/web/new_index.html"
+   command = "chrome http://google.com/ http://${aws_instance.web_os.public_ip}/web/new_index.html"
   }
 }
