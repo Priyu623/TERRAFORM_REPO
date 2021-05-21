@@ -10,6 +10,6 @@ provider "google" {
   project     ="terraformprod2"
   region      = "asia-south1"
   zone        = "asia-south-c"
-  credentials = file("/Downloads/credentials.json")
+  credentials = file("/Downloads/terraformprod2-key.json")
   
 }
