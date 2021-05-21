@@ -38,13 +38,13 @@ variable "istest" {
 
 variable "azaws" {
   
-    default = ["ap-south-1a", "ap-south-1b", "uap-south-1c"]
+    default = ["ap-south-1a", "ap-south-1b", "ap-south-1c"]
     type    = list
 }
 
 variable "types" {
   
-    type = map
+    type    = map
     default = {
       
         us-east-1  = "t2.micro",
