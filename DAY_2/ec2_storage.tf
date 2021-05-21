@@ -1,6 +1,6 @@
 provider "aws" {
 
-  region = "us-east-1"
+  region     = "us-east-1"
   access_key = "XYZ"
   secret_key = "ABC"
 
@@ -30,7 +30,7 @@ resource "aws_ebs_volume"  "ebs_vol" {
 resource "aws_volume_attachment"  "vol_attach" {
   
   device_name = "/dev/sdn"
-  volume_id = aws_ebs_volume.ebs_vol.id
+  volume_id   = aws_ebs_volume.ebs_vol.id
   instance_id = aws_instance.EC2_OS.id
 
 }
