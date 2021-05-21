@@ -8,10 +8,12 @@ provider "aws" {
 
 resource "aws_instance"  "EC2_OS" {
 
-  ami = "ami-0d5eff06f840b45e9"
+  ami           = "ami-0d5eff06f840b45e9"
   instance_type = "t2.micro"
   tags = {
+    
     Name = "EBS_VOLUME"
+    
   }
 
 }  
@@ -19,9 +21,11 @@ resource "aws_instance"  "EC2_OS" {
 resource "aws_ebs_volume"  "ebs_vol" {
   
   availability_zone = aws_instance.EC2_OS.availability_zone
-  size = 10
+  size              = 10
   tags = {
+    
     Name = "MY_VOl"
+    
   }
 
 }
