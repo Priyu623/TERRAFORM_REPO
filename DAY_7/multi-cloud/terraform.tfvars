@@ -2,4 +2,4 @@
 
 # y = "t2.small"
 
-mtype = "e2-medium"
+mem_type = "e2-medium"
