@@ -29,7 +29,7 @@
 
 # LET'S CREATE OUR FINALL VARIABLES HERE
 
-variable "mtype" {}
+variable "mem_type" {}
 
 variable "istest" {
   
