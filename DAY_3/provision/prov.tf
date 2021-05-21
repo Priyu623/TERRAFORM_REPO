@@ -69,20 +69,23 @@ provisioner "remote-exec" {
 
 resource "null_resource" "nullremote2" {
   
-provisioner "local-exec" {
+provisioner "local-exec" { 
+  
    command = "chrome http://{aws_instance.prov_os.public_ip}/web/index.php"
+  
   }
+  
 }
 
 output "opt1" {
 
-value = aws_instance.prov_os
+  value = aws_instance.prov_os
 
 }
 
 output "opt2" {
 
-value = aws_instance.prov_os.public_ip
+  value = aws_instance.prov_os.public_ip
 
 }
 
