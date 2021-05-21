@@ -1,15 +1,15 @@
 provider "aws" {
   
-  region = "us-east-1"
+  region     = "us-east-1"
   access_key = "XYZ"
   secret_key = "ABC"
 }
 
 resource "aws_instance" "prov_os" {
-  ami = "ami-0d5eff06f840b45e9"
-  instance_type = "t2.micro"
+  ami             = "ami-0d5eff06f840b45e9"
+  instance_type   = "t2.micro"
   security_groups = [ "terraform-sg" ]
-  key_name = "terrraform_key"
+  key_name        = "terrraform_key"
 
   tags = {
     Name = "NEW_OS"
@@ -18,7 +18,7 @@ resource "aws_instance" "prov_os" {
 
 resource "aws_ebs_volume" "ebs_vol1" {
   availability_zone = aws_instance.prov_os.availability_zone
-  size = 10
+  size              = 10
   tags = {
     Name = "MY_NEW_VOL"
   }
@@ -26,17 +26,17 @@ resource "aws_ebs_volume" "ebs_vol1" {
 
 resource "aws_volume_attachment" "ebs_attach" {
   device_name = "/dev/sdn"
-  volume_id = aws_ebs_volume.ebs_vol1.id
+  volume_id   = aws_ebs_volume.ebs_vol1.id
   instance_id = aws_instance.prov_os.id
 }
 
 resource "null_resource" "nullremote1" {
 
 connection {
-  type = "ssh"
-  user = "ec2-user"
+  type        = "ssh"
+  user        = "ec2-user"
   private_key = file("C:/terrraform_key.pem")
-  host = aws_instance.prov_os.public_ip
+  host        = aws_instance.prov_os.public_ip
  }
 
 provisioner "remote-exec" {
