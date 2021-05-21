@@ -1,7 +1,7 @@
 resource "google_compute_instance" "gcp_os" {
   
   name         = "os1"
-  machine_type = var.mtype
+  machine_type = var.mem_type
   zone         = "asia-south-c"
   count        = var.istest ? 1 : 0
   
