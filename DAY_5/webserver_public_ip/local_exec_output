@@ -3,7 +3,11 @@ resource "null_resource"  "nullremote2" {
     depends_on = [
         null_resource.nullremote1
     ]
+    
 provisioner "local-exec" {
+
    command = "chrome http://${aws_instance.web_os.public_ip}/web/new_index.html"
+   
   }
+  
 }
