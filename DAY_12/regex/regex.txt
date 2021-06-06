@@ -1,3 +1,5 @@
+regex Function : regex applies a regular expression to a string and returns the matching substrings.
+
 # terraform console
 
 # regex("[a-z]+", "53453453.345345aaabbbccc23454")
