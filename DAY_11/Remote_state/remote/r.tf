@@ -12,6 +12,8 @@ terraform {
     bucket = "my-tf-lw-bucket-4"
     key    = "my_tfstate"
     region = "us-east-1"
+    
+dynamodb_table = "tfstate-lock-table"
 
   }
   
