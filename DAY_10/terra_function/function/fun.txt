@@ -1,0 +1,7 @@
+# terraform console
+
+# max (5,12,9)
+
+# element (["a" , "b" , "c"], 1)
+
+# lookup({a = "ay" , b = "bee"}, "a" , "what?")
