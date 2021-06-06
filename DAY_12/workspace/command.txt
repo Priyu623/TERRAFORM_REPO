@@ -1,0 +1,11 @@
+# terraform workspace -h
+
+# terraform workspace list
+
+# terraform workspace new dev
+
+# terraform workspace show
+
+# terraform workspace new prod
+
+# terraform workspace select dev
