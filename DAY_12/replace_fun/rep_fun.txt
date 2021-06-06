@@ -1,0 +1,6 @@
+# terraform console
+
+# replace("1 + 2 + 3", "+", "-")
+
+# replace("hello world", "/w.*d/", "everybody")
+
