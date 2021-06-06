@@ -9,7 +9,7 @@ terraform {
   
   backend "s3" {
     
-    bucket = "my"
+    bucket = "my-tf-lw-bucket-4"
     key    = "my_tfstate"
     region = "us-east-1"
 
