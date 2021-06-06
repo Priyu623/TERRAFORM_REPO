@@ -1,3 +1,5 @@
+replace Function : replace searches a given string for another given substring, and replaces each occurrence with a given replacement string.
+
 # terraform console
 
 # replace("1 + 2 + 3", "+", "-")
