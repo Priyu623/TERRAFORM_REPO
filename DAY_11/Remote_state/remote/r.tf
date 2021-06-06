@@ -20,3 +20,8 @@ dynamodb_table = "tfstate-lock-table"
 }
 
 
+# SOME COMMANDS ARE :
+
+# terraform state
+
+# terraform state pull
