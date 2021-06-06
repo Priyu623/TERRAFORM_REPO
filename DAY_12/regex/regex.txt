@@ -1,0 +1,7 @@
+# terraform console
+
+# regex("[a-z]+", "53453453.345345aaabbbccc23454")
+
+# regex("^(?:(?P<scheme>[^:/?#]+):)?(?://(?P<authority>[^/?#]*))?", "https://terraform.io/docs/")
+
+# regex("[a-z]+", "53453453.34534523454")
